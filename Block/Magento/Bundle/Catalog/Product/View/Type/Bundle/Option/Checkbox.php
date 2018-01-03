@@ -14,7 +14,7 @@ class Checkbox extends \Magento\Bundle\Block\Catalog\Product\View\Type\Bundle\Op
     public function getSelectionQtyTitlePrice($selection, $includeContainer = true)
     {
         $this->setFormatProduct($selection);
-        $priceTitle = '<a href="' . $selection->getProductUrl() . '" title="' . $this->escapeHtml($selection->getName()) . '"><span class="product-name">' . $selection->getSelectionQty() * 1 . ' x ' . $this->escapeHtml($selection->getName()) . '</span></a>';
+        $priceTitle = '<a href="' . $selection->getProductUrl() . '" target="blank" title="' . $this->escapeHtml($selection->getName()) . '"><span class="product-name">' . $selection->getSelectionQty() * 1 . ' x ' . $this->escapeHtml($selection->getName()) . '</span></a>';
 
         $priceTitle .= ' &nbsp; ' . ($includeContainer ? '<span class="price-notice">' : '') . '+' .
             $this->renderPriceString($selection, $includeContainer) . ($includeContainer ? '</span>' : '');
